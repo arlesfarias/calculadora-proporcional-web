@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>Calculadora de boleto proporcional</h1>
-        <p id="resultado">Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:</h3>
+        <p>Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:</h3>
         <div class="row">
             <div class="col-md"></div>
             <div class="col-md">Data Inicial <input type="date" name="dataInicio"></div>
@@ -30,6 +30,7 @@
         <div class="row">
             <input type="button" onClick="calcula()" id="bt-calcula" value="Calcular" class="btn btn-primary">
         </div>
+        <div id="resultado" class="alert alert-primary" hidden></div>
     </div>
 </body>
 </html>

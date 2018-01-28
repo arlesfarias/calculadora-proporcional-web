@@ -23,4 +23,5 @@ function calcula(){
     var resultado = "O valor a ser pago para utilizar por " + diasUtilizados + " dias o plano de R$ " + parseFloat(valorPlano).toFixed(2) + " é: <b>R$ " + valor + "</b>";
 
     document.getElementById("resultado").innerHTML = resultado;
+    document.getElementById("resultado").removeAttribute('hidden');
 }
