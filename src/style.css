@@ -1,0 +1,19 @@
+body{
+    background: skyblue;
+}
+
+#conteudo{
+    border: solid 2px blue;
+    text-align: center;
+}
+#resultado{
+    border: solid 2px red;
+}
+
+#datas{
+    border: solid 2px red;
+}
+
+#valores{
+    border: solid 2px red;
+}
