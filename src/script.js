@@ -9,6 +9,12 @@ function calcula(){
         return;
     }
 
+    //evita que o usuário coloque uma data fim menor que a data inicio
+    if(dataFim < dataInicio){
+        alert("A data final deve ser maior que a inicial");
+        return;
+    }
+
     //864000000 ms em um dia
     var diasUtilizados = (dataFim - dataInicio)/86400000;
     var resultado = ((diasUtilizados/30)*valorPlano).toFixed(2);
