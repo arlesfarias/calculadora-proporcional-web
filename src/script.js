@@ -17,7 +17,10 @@ function calcula(){
 
     //864000000 ms em um dia
     var diasUtilizados = (dataFim - dataInicio)/86400000;
-    var resultado = ((diasUtilizados/30)*valorPlano).toFixed(2);
-    
+    var valor = ((diasUtilizados/30)*valorPlano).toFixed(2);
+
+    //formata a frase que será mostrada para o usuário
+    var resultado = "O valor a ser pago para utilizar por " + diasUtilizados + " dias o plano de R$ " + parseFloat(valorPlano).toFixed(2) + " é: <b>R$ " + valor + "</b>";
+
     document.getElementById("resultado").innerHTML = resultado;
 }
