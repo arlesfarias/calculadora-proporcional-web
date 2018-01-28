@@ -25,3 +25,9 @@ function calcula(){
     document.getElementById("resultado").innerHTML = resultado;
     document.getElementById("resultado").removeAttribute('hidden');
 }
+
+function limpa(){
+    document.querySelector('input[name=dataInicio]').value = null;
+    document.querySelector('input[name=dataFim]').value = null;
+    document.getElementById("resultado").setAttribute("hidden", null);
+}
