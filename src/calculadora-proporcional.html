@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="script.js"></script>
     <title>Calculadora Proporcional</title>
 </head>
 <body>
-    <div id="conteudo">
-        <div id="resultado">
-            Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:
+    <div class="container">
+        <h1>Calculadora de boleto proporcional</h1>
+        <p id="resultado">Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:</h3>
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">Data Inicial <input type="date" name="dataInicio"></div>
+            <div class="col-md">Data Final <input type="date" name="dataFim"></div>
+            <div class="col-md"></div>
         </div>
-        <div id="datas">
-            Data Inicial <input type="date" name="dataInicio"><br>
-            Data Final <input type="date" name="dataFim">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md"><input type="radio" name="valor" value="49.9" checked> R$ 49,90 </div>
+            <div class="col-md"><input type="radio" name="valor" value="69.9"> R$ 69,90 </div>
+            <div class="col-md"><input type="radio" name="valor" value="99.9"> R$ 99,90 </div>
+            <div class="col-md"><input type="radio" name="valor" value="129.9"> R$ 129,90 </div>
+            <div class="col-md"></div>
         </div>
-        <div id="valores">
-            <input type="radio" name="valor" value="49.9" checked> R$ 49,90
-            <input type="radio" name="valor" value="69.9"> R$ 69,90
-            <input type="radio" name="valor" value="99.9"> R$ 99,90
-            <input type="radio" name="valor" value="129.9"> R$ 129,90
+        <div class="row">
+            <input type="button" onClick="calcula()" id="bt-calcula" value="Calcular" class="btn btn-primary">
         </div>
-        <input type="button" onClick="calcula()" id="bt-calcula" value="Calcular">
     </div>
 </body>
 </html>
