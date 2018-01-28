@@ -1,17 +1,20 @@
 function calcula(){
+    var alertaDiv = document.getElementById("alerta");
     var valorPlano = document.querySelector('input[name=valor]:checked').value;
     var dataInicio = new Date(document.querySelector('input[name=dataInicio]').value);
     var dataFim = new Date(document.querySelector('input[name=dataFim]').value);
     
     //checar se os campos de datas foram preenchidos corretamente
     if((!Date.parse(dataInicio)) || (!Date.parse(dataFim))){
-        alert("Preencha corretamente os campos de data");
+        alertaDiv.innerHTML = "Preencha corretamente os campos de data!";
+        alertaDiv.removeAttribute('hidden');
         return;
     }
 
     //evita que o usuário coloque uma data fim menor que a data inicio
     if(dataFim < dataInicio){
-        alert("A data final deve ser maior que a inicial");
+        alertaDiv.innerHTML = "A data final deve ser maior que a inicial!";
+        alertaDiv.removeAttribute('hidden');
         return;
     }
 
@@ -24,6 +27,7 @@ function calcula(){
 
     document.getElementById("resultado").innerHTML = resultado;
     document.getElementById("resultado").removeAttribute('hidden');
+    alertaDiv.setAttribute("hidden", null);
 }
 
 function limpa(){
