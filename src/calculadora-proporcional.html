@@ -14,22 +14,49 @@
         <h1>Calculadora de boleto proporcional</h1>
         <p>Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:</h3>
         <div class="row">
-            <div class="col-md"></div>
-            <div class="col-md">Data Inicial <input type="date" name="dataInicio"></div>
-            <div class="col-md">Data Final <input type="date" name="dataFim"></div>
-            <div class="col-md"></div>
-        </div>
-        <div class="row">
-            <div class="col-md"></div>
-            <div class="col-md"><input type="radio" name="valor" value="49.9" checked> R$ 49,90 </div>
-            <div class="col-md"><input type="radio" name="valor" value="69.9"> R$ 69,90 </div>
-            <div class="col-md"><input type="radio" name="valor" value="99.9"> R$ 99,90 </div>
-            <div class="col-md"><input type="radio" name="valor" value="129.9"> R$ 129,90 </div>
-            <div class="col-md"></div>
-        </div>
-        <div class="row">
-            <input type="button" onClick="calcula()" id="bt-calcula" value="Calcular" class="btn btn-primary">
-            <input type="button" onclick="limpa()" value="Limpar" class="btn btn-secondary">
+            <div class="col-md">
+                <div class="row">
+                    <label for="dataInicio">Data Inicial:</label> 
+                    <input type="date" name="dataInicio" id="dataInicio" class="form-control">
+                </div>
+                <div class="row">
+                    <label for="dataFim">Data Final:</label>
+                    <input type="date" name="dataFim" id="dataFim" class="form-control">
+                </div>
+            </div>
+            <div class="col-md">
+                <fieldset class="form-group">
+                    <legend class="col-form-legend">Planos</legend>
+                    <div class="form-check">
+                        <label for="49" class="form-check-label">
+                            <input id="49" type="radio" name="valor" value="49.9" checked class="form-check-input">
+                            R$ 49,90
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label for="69" class="form-check-label">
+                            <input id="69" type="radio" name="valor" value="69.9" class="form-check-input">
+                            R$ 69,90
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label for="99" class="form-check-label">
+                            <input id="99" type="radio" name="valor" value="99.9" class="form-check-input">
+                            R$ 99,90
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label for="129" class="form-check-label">
+                            <input id="129" type="radio" name="valor" value="129.9" class="form-check-input">
+                            R$ 129,90
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md">
+                <button type="button" onClick="calcula()" id="bt-calcula" class="btn btn-primary btn-block">Calcular</button>
+                <button type="button" onclick="limpa()" class="btn btn-secondary btn-block">Limpar</button>
+            </div>
         </div>
         <div id="resultado" class="alert alert-primary" hidden></div>
         <div id="alerta" class="alert alert-warning" hidden></div>
