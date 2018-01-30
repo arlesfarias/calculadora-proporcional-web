@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="script.js"></script>
     <title>Calculadora Proporcional</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Calculadora de boleto proporcional</h1>
-        <p>Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:</h3>
+        <p>Selecione a data de início, a data da primeira fatura e o valor do plano utilizado:</p>
         <div class="row">
             <div class="col-md">
                 <div class="row">
-                    <label for="dataInicio">Data Inicial:</label> 
+                    <label for="dataInicio">Data Inicial:</label>
                     <input type="date" name="dataInicio" id="dataInicio" class="form-control">
                 </div>
                 <div class="row">
@@ -29,26 +32,22 @@
                     <legend class="col-form-legend">Planos</legend>
                     <div class="form-check">
                         <label for="49" class="form-check-label">
-                            <input id="49" type="radio" name="valor" value="49.9" checked class="form-check-input">
-                            R$ 49,90
+                            <input id="49" type="radio" name="valor" value="49.9" checked class="form-check-input"> R$ 49,90
                         </label>
                     </div>
                     <div class="form-check">
                         <label for="69" class="form-check-label">
-                            <input id="69" type="radio" name="valor" value="69.9" class="form-check-input">
-                            R$ 69,90
+                            <input id="69" type="radio" name="valor" value="69.9" class="form-check-input"> R$ 69,90
                         </label>
                     </div>
                     <div class="form-check">
                         <label for="99" class="form-check-label">
-                            <input id="99" type="radio" name="valor" value="99.9" class="form-check-input">
-                            R$ 99,90
+                            <input id="99" type="radio" name="valor" value="99.9" class="form-check-input"> R$ 99,90
                         </label>
                     </div>
                     <div class="form-check">
                         <label for="129" class="form-check-label">
-                            <input id="129" type="radio" name="valor" value="129.9" class="form-check-input">
-                            R$ 129,90
+                            <input id="129" type="radio" name="valor" value="129.9" class="form-check-input"> R$ 129,90
                         </label>
                     </div>
                 </fieldset>
@@ -62,4 +61,5 @@
         <div id="alerta" class="alert alert-warning" hidden></div>
     </div>
 </body>
+
 </html>
